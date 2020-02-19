@@ -1,0 +1,93 @@
+/* pages/cake/myCenter/myCenter.wxss */
+.myOrder{
+  /* border: 1px solid red; */
+  width: 96%;
+  margin: 0 auto;
+  color: #3e3e3e;
+}
+.myOrder>h1{  
+  font-size: 30rpx;
+  padding: 16rpx 0rpx;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  color: rgb(194, 52, 9);
+}
+.orderOne>h1:nth-child(1){
+  display: inline-block;
+  float: left;
+}
+.orderOne>h1:nth-child(2){
+  display: inline-block;
+  float: right;
+  color: #ff4001;
+  margin-right: 8rpx;
+}
+.orderOne{
+  margin-top: 20rpx;
+  border: 1px solid rgb(218, 210, 210);
+}
+.orderOne>view{
+  clear: both;
+  display: flex;
+  flex-direction: row;
+}
+.orderOne>view>image{
+  width: 25%;
+  height: 180rpx;
+  margin-top: 8rpx;
+}
+.orderDe{
+  width: 75%;
+}
+.orderDe h2{
+  display: block;
+  margin-top: 8rpx;
+  margin-left: 10rpx;
+   font-size: 30rpx;
+}
+.orderDe h2:nth-child(2){
+  font-size: 26rpx;
+  color: rgb(151, 151, 151);
+}
+.orderDe h3{
+  float: left;
+  margin-top: 16rpx;
+  margin-left: 10rpx;
+  color: #ff4001;
+}
+.orderDe span{
+  float: right;
+  margin-top: 16rpx;
+  margin-right: 8rpx;
+}
+.orderDe span em{
+  font-style: normal;
+  color: #ff4001;
+}
+.myAddress{
+  /* border: 1px solid red; */
+  width: 96%;
+  margin: 0 auto;
+  color: #3e3e3e;
+}
+.myAddress>h1{  
+  font-size: 30rpx;
+  padding: 16rpx 0rpx;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  color: rgb(194, 52, 9);
+}
+.addressOne{
+  margin-top: 20rpx;
+  border: 1px solid rgb(218, 210, 210);
+}
+.addressOne>h1{
+  display: block;
+  margin-left: 8rpx;
+  margin-top: 6rpx;
+  margin-bottom: 6rpx;
+}
+.addressOne>h1>span{
+  color: #4b4949;
+  font-size: 28rpx;
+}

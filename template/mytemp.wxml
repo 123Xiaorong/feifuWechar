@@ -1,0 +1,14 @@
+<template name='test1'>
+  <view>
+    <text class="colorR">测试测试测试1</text>
+  </view>
+</template>
+<template name='test2'>
+  <view>
+    <text class="colorR">{{single}}</text>
+    <text>{{single2}}</text>
+    <!-- <import src='./grandson'/>
+    <template is='grandson' name='mytempG'></template> -->
+  </view>
+</template>
+

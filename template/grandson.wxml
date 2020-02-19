@@ -1,0 +1,3 @@
+<template name='grandson'>
+  <view>你是孙子！</view>
+</template>

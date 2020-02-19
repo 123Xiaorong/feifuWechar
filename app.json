@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/cake/index/index",
+    "pages/cake/myCenter/myCenter",
+    "pages/cake/cart/cart",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/cake/goodDetail/goodDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "妃芙蛋糕",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d24a58",
+    "backgroundColor": "#f6f6f7",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/cake/index/index",
+        "text": "首页",
+        "iconPath": "images/image/index_icon.png",
+        "selectedIconPath": "images/image/index_icon_HL.png"
+      },
+      {
+        "pagePath": "pages/cake/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/image/skill_icon.png",
+        "selectedIconPath": "images/image/skill_icon_HL.png"
+      },
+      {
+        "pagePath": "pages/cake/myCenter/myCenter",
+        "text": "我的",
+        "iconPath": "images/image/user_icon.png",
+        "selectedIconPath": "images/image/user_icon_HL.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

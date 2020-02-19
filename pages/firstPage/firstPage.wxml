@@ -1,0 +1,20 @@
+<view class="list">
+  <view class="item">
+    <text>1</text>
+  </view>
+  <view class="item">
+    <text>2</text>
+  </view>
+  <view class="item">
+    <text>3</text>
+  </view>
+  <view class="item">
+    <text>4</text>
+  </view>
+  <view class="item">
+    <text>5</text>
+  </view>
+   <view class="item">
+    <text>6</text>
+  </view>
+</view>

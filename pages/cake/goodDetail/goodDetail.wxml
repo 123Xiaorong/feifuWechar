@@ -1,0 +1,42 @@
+<!--pages/cake/goodDetail/goodDetail.wxml-->
+<scroll-view scroll-y="true" class="page-section-spacing" bindscrolltolower="lower">
+  <!--banner 轮播图-->
+  <view class="page-section page-section-spacing swiper">
+    <!-- 滑块视图容器 -->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+      <block wx:for="{{goodDetailturnImg}}" wx:key="*this">
+        <swiper-item>
+          <image src='http://localhost:8888/images/image/{{item}}' mode="aspectFill" class="goodDetailLunbo"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="goodDteail">
+    <!-- 商品名称 商品价格-->
+    <view class="goodName">
+      <span>{{goodDetailsArr.goodsname}}</span>
+      <span>分享</span>
+      <span>￥ {{goodDetailsArr.price}}</span>
+    </view>
+    <!-- 运费 -->
+    <view class="yunfei">运费 免运费</view>
+    <!-- 蛋糕规格 -->
+    <view class="goodSize">
+        <span>{{goodDetailsArr.size}}</span>
+        <span>{{goodDetailsArr.specification}}</span>
+        <span>{{goodDetailsArr.number}}</span>
+        <span>{{goodDetailsArr.weight}}</span>
+    </view>
+    <!-- 蛋糕材料 -->
+    <view class="goodMaterial">
+      <h1>{{goodDetailsArr.material}}</h1>
+      <h1>{{goodDetailsArr.details}}</h1>
+    </view>
+  </view>
+  <!-- 商品详情图片 -->
+  <view>
+    <block wx:for="{{goodDetailsImgsArr}}" wx:key="*this">
+      <image src='http://localhost:8888/images/image/{{item}}' mode="aspectFill" class="detailImg"></image>
+    </block>
+  </view>
+</scroll-view>

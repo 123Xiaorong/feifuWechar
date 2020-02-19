@@ -1,0 +1,32 @@
+<!--pages/cake/myCenter/myCenter.wxml-->
+<view>
+  <view class="myOrder">
+    <h1>我的订单</h1>
+    <view class="orderOne" wx:for="{{resultArr}}" wx:key="item.G_id">
+      <h1>订单编号： 2019122000001</h1>
+      <h1>交易完成</h1>
+      <view>
+        <image src="http://localhost:8888/images/image/{{item.img}}"></image>
+        <view class="orderDe">
+          <h2>商品名称：{{item.goodsname}}</h2>
+          <h2>{{item.specification}}，自提</h2>
+          <h3>￥ {{item.price}}</h3>
+          <span>数量：<em>{{totalNum}}</em></span>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="myAddress">
+    <h1>收货地址</h1>
+    <view class="addressOne">
+      <h1>姓名：<span>{{userName}}</span></h1>
+      <h1>电话号码：<span>13666237413</span></h1>
+      <h1>收货地址：<span>四川省成都市武侯区宝润苑</span></h1>
+    </view>
+    <view class="addressOne">
+      <h1>姓名：<span>小红</span></h1>
+      <h1>电话号码：<span>13666237413</span></h1>
+      <h1>收货地址：<span>四川省成都市武侯区宝润苑</span></h1>
+    </view>
+  </view>
+</view>

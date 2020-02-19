@@ -1,0 +1,117 @@
+/* pages/cake/cart/cart.wxss */
+.cartImg{
+  width: 100%;
+  height: 180px
+}
+.kong{
+text-align: center;
+}
+.kong>h1{
+  display: inline-block;
+  width: 100%;
+  color: #3e3e3e;
+  font-style: normal;
+  margin-top: 20rpx;
+}
+.kong>h4{
+  color: #8f8888;
+  font-size: 22rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.kong button{
+  padding: 0;
+  margin-top: 20rpx;
+  /* background-color: red; */
+  width: 80px;
+  font-size: 28rpx;
+  min-height:36px;
+  font-weight: normal;
+  line-height: 36px;
+  color: green;
+  border: 1rpx solid green;
+  border-radius: 36px;
+}
+.goodCart{
+  /* padding-bottom: -45px; */
+}
+.goodCartOne{
+  /* display: flex;
+  flex-direction: row; */
+}
+.goodCartOne>checkbox{
+  clear: left;
+  float: left;
+  margin-left: 2%;
+  line-height: 150rpx;
+  display: inline-block;
+  width: 7%;
+}
+.goodImg{
+  width: 20%;
+  float: left;
+  /* margin-left: 7%; */
+}
+.goodImg>image{
+  width: 100%;
+  height: 150rpx;
+  
+
+}
+.goodRight{
+  width: 71%;
+  float: left;
+  /* padding-left: 10rpx; */
+  color: #3e3e3e;
+}
+.goodRight>h1{
+  display: block;
+  margin-top: 12rpx;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+.goodRight>h2{
+  display: block;
+  margin-top: 12rpx;
+  font-size: 25rpx;
+  color: #8f8888;
+   margin-left: 20rpx;
+}
+.goodRight>h3{
+  display: block;
+  margin-top:12rpx;
+  font-size: 28rpx;
+   margin-left: 20rpx;
+}
+.goodRight>h3>span:nth-child(1)>em{
+  color: #ff4001;
+}
+.goodRight>h3>span:nth-child(2){
+display: inline-block;
+float: right;
+margin-right: 20rpx;
+}
+.goodRight>h3>span:nth-child(2)>em{
+  margin: 0 8rpx;
+  display: inline-block;
+  background-color: rgb(230, 220, 220);
+  padding: 0 8rpx;
+}
+.cartRes{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #D24A58;
+  color: white;
+}
+.cartDet{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #D24A58;
+  color: white;
+}

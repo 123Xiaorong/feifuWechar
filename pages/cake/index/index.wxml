@@ -1,0 +1,67 @@
+<!--pages/cake/index/index.wxml-->
+<view class="container">
+  <!-- 可滚动视图区域。使用竖向滚动 -->
+  <scroll-view scroll-y="true" class="page-section-spacing" bindscrolltolower="lower">
+    <!--banner 轮播图-->
+    <view class="page-section page-section-spacing swiper">
+      <!-- 滑块视图容器 -->
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <block wx:for="{{arrLunBo}}" wx:key="*this">
+          <swiper-item>
+            <image src='http://localhost:8888/images/image/{{item.img}}'></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 搜索框 -->
+    <view class="page-section">
+      <!-- <view class="weui-cells__title">可以自动聚焦的input</view> -->
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input type='text' class="weui-input" bindinput="searchVal" name="searchVal" auto-focus placeholder="请输入商品名称" />
+          <!-- <span class="searchBtn" catchtap="searchGood">搜索</span> -->
+          <mp-icon class="searchBtn" catchtap="searchGood" type="field" icon="search" color="rgb(107, 103, 103)" size="{{23}}"></mp-icon>
+        </view>
+      </view>
+    </view>
+    <!-- 分类查看 -->
+    <view class="nav_top">
+      <block wx:for="{{arrStyle}}" wx:key="item.id">
+        <view class="nav_top_items" bindtap="switchTab" data-index="{{index}}" data-id="{{item.id}}">
+          <!-- <view class="nav_top_items"id="{{curNavId}}"> -->
+          <image src="{{item.icon}}" mode="aspectFill"></image>
+          <text>{{item.title}}</text>
+        </view>
+      </block>
+    </view>
+    <!-- 商品展示 -->
+    <view class="nav_section">
+      <view wx:if="{{goodsArr}}">
+        <block wx:for="{{goodsArr}}" wx:key="item.G_id">
+          <view class="nav_section_items">
+            <!--image-->
+            <view class="section_image" bindtap="getDetail" data-aid="{{item.G_id}}">
+              <block wx:if="{{item.img}}">
+                <image src="http://localhost:8888/images/image/{{item.img}}" mode="aspectFill"></image>
+              </block>
+            </view>
+            <!--content-->
+            <view class="section_cont" bindtap="getDetail" data-aid="{{item.G_id}}">
+              <view class="section_cont_sub">
+                <text>{{item.goodsname}}</text>
+              </view>
+              <view class="section_cont_price">价格：{{item.price}}</view>
+              <view>描述：{{item.description}}</view>
+            </view>
+            <!--purse-->
+            <view class="section_purse" bindtap="purseTap" data-aid="{{item.G_id}}">
+              <text>购买</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view wx:else>暂无数据</view>
+    </view>
+
+  </scroll-view>
+</view>

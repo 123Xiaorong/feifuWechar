@@ -1,0 +1,13 @@
+<view>
+  <view>
+   <text>inlcudetemp的测试内容</text>
+  </view>
+  <view>
+   <h1>inlcudetemp的测试内容</h1>
+  </view>
+</view>
+<template>
+  <view>
+   <text>template这是includetemp里面的内容</text>
+  </view>
+</template>

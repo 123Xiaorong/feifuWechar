@@ -1,0 +1,53 @@
+
+.list{
+  display: flex;
+  /*主轴方向*/
+  flex-direction: row;/*row默认 row-reverse横排反向 column竖排 column-reverse竖排反向*/
+  /*内容是否换行*/
+  flex-wrap: nowrap;/*nowrap默认不换行 wrap-reverse换行反向*/
+  /*主轴对齐方式*/
+  /* justify-content: center; */
+  /*center 居中对齐 | flex-start 开始对齐 | flex-end 结束对齐 |space-around分散对齐（两侧有间距） |space-between 分散对齐（两侧无间距）
+  */
+
+
+  /*交叉轴对齐方式*/
+  align-items: stretch;/*flex-end 交叉轴底部对齐 flex-strat默认交叉轴顶部对齐
+  center 交叉轴中部对齐  baseline 交叉轴文字基线对齐 stretch拉伸，将盒子拉伸撑满容器*/
+  height: 300px;
+
+  align-content: space-between;/*flex-end 交叉轴结束 |flex-start 交叉轴开始 |center 交叉轴居中 |space-around 中间留空（两边留白）|space-between 中间留空（两边不留白）
+  */
+  background-color: rgb(248, 216, 33)
+}
+.item{
+  background-color: #06cdff;
+  border:1px solid rgb(72, 33, 248);
+  width: 100px;
+  height: 50px;
+  flex-basis: 200px;/*设置项目占据的主轴空间，可以是百分比也可以是固定像素*/
+}
+.item:nth-child(1){
+  height: 40px;
+  font-size: 40px;
+  order: 0;/*0是该属性的默认值，值越小排序位置越靠前*/
+  /* flex-grow:1; 对容器中没有占满的空间进行分配 */
+  /* flex-shrink: 2;空间不够的时候缩小的比例，0表示不缩放 1正常缩放比例 数字值越大，缩小得越多 */
+
+  align-self: center;/*交叉轴对齐方向*/
+
+}
+.item:nth-child(2){
+  height: 50px;
+  font-size: 30px;
+  /* order: 2; */
+
+}
+.item:nth-child(3){
+  height: 30px;
+  flex-grow:1; /*对容器中没有占满的空间进行分配*/
+}
+
+/*http://flexboxfroggy.com/#zh-cn
+http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+https://blog.csdn.net/m0_37851778/article/details/77241009*/

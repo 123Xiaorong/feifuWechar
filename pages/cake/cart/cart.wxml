@@ -1,0 +1,39 @@
+<!--pages/cake/cart/cart.wxml-->
+<!-- <mp-icon type="field" icon="shop" color="black" size="{{25}}"></mp-icon> -->
+<view>
+  <view class="kong" style="display:{{display}}">
+  <!-- <view class="kong"> -->
+    <!-- <image src="../../../images/image/cart.jpg" class="cartImg"></image> -->
+    <!-- <h1>购物车还是空的</h1> -->
+    <h4>赶紧买点宝贝慰劳下自己吧</h4>
+    <!-- <navigator url="/pages/cake/index/index">去逛逛</navigator> -->
+    <button bindtap="goShopping">去逛逛</button>
+  </view>
+  <view wx:if="{{goodArr}}" class="goodCart">
+    <block wx:for="{{goodArr}}" wx:key="item.G_id">
+      <view class="goodCartOne">
+        <checkbox></checkbox>
+        <view class="goodImg">
+          <image src="http://localhost:8888/images/image/{{item.img}}" mode="aspectFill"></image>
+        </view>
+        <view class="goodRight">
+          <h1>商品名称：{{item.goodsname}}</h1>
+          <h2>规格：{{item.specification}}</h2>
+          <h3>
+            <span>价格：￥<em>{{item.price}}</em></span>
+            <span>
+              <em class="subNum" bindtap="subNum">-</em> 
+              <span class="totalNum"> {{totalNum}} </span>
+              <em class="addNum" bindtap="addNum">+</em>
+            </span>
+          </h3>
+        </view>
+
+      </view>
+    </block>
+  </view>
+  <view>
+    <button bindtap="cartDet" class="cartDet">删除</button>
+    <button bindtap="cartRes" class="cartRes">结算</button>
+  </view>
+</view>
